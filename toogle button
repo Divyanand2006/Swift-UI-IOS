@@ -1,0 +1,15 @@
+import SwiftUI
+
+struct ContentView: View {
+    @State private var isOn = false
+
+    var body: some View {
+        VStack {
+            Toggle("Enable Wi-Fi", isOn: $isOn)
+
+            Text(isOn ? "ON" : "OFF")
+                .font(.largeTitle)
+        }
+        .padding()
+    }
+}
